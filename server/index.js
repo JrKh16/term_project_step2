@@ -57,7 +57,7 @@ function saveUserData(userData) {
 
   // const sql = `INSERT INTO users (gender, title, first, last, country,dob, uuid, email, username, password, picture_large, picture_medium, picture_thumbnail) 
   //              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
-  const sql = 'INSERT INTO users SET ?';
+  const sql = 'INSERT INTO user SET ?';
   const values = {gender, title, first, last, country,dob:dateOfBirth, uuid, email, username, password, md5, sha1, sha256, picture_large:large, picture_medium:medium, picture_thumbnail:thumbnail};
 
   connection.query(sql, values, (error, results, fields) => {
